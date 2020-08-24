@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: server
+  template:
+    metadata:
+      labels:
+        run: server
+    spec:
+      containers:
+        - name: kubert-server
+          image: psdocker/myapp:mytag
