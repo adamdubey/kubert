@@ -4,12 +4,16 @@
   "description": "Backend API Server.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "keywords": [
     "docker",
+    "kubernetes",
     "kubert"
   ],
   "author": "Adam Dubey",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
