@@ -14,9 +14,7 @@ app.get("/api/status", (req, res) => {
 });
 
 app.get("/api/hello", (req, res) => {
-  res.send({
-    message: "Greetings, Citizen of the Internet!",
-  });
+  res.send("Greetings, Citizen of the Internet!");
 });
 
 const PORT = process.env.port || 5000;
