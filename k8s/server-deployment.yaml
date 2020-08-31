@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kubert-server
+  template:
+    metadata:
+      labels:
+        app: kubert-server
+    spec:
+      containers:
+        - name: server
+          image: jigglybytez/kubert
+          ports:
+            - containerPort: 5000
