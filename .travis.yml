@@ -1,8 +1,11 @@
 language: generic
-sudo: required
+sudo: true
 services:
   - docker
 before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t jigglybytez/kubert -f ./server/Dockerfile ./server
 script:
   - docker run -e CI=true jigglybytez/kubert npm run test
+after_success:
+  - exit 0

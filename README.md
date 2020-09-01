@@ -1,6 +1,6 @@
 # kubert
 
-Guided lab tutorial application.
+[Guided lab](https://adamdubey.github.io/) tutorial application.
 
 ## Quick Start
 
